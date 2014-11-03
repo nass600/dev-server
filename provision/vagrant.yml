@@ -1,0 +1,28 @@
+---
+- hosts: all
+  sudo: true
+  vars:
+    php_packages:
+      - { name: dev, package: php5-dev }
+      - { name: pear, package: php-pear }
+      - { name: xdebug, package: php5-xdebug }
+      - { name: curl, package: php5-curl }
+      - { name: mcrypt, package: php5-mcrypt }
+      - { name: mysql, package: php5-mysql }
+      - { name: redis, package: php5-redis }
+    php_extensions:
+      - { name: "mongo", package: "pecl.php.net/mongo" }
+    pear_packages:
+      - { channel: "pear.phing.info", package: "phing/phing" }
+    node_version: 0.11.14
+  roles:
+    - init
+    - git
+    - nginx
+    - mysql
+    - mongo
+    - php5
+    - composer
+    - redis
+    - nodejs
+    - yeoman

@@ -1,0 +1,8 @@
+---
+- name: Install NVM
+  sudo: no
+  shell: curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+
+- name: Install nodeJS
+  sudo: no
+  shell: /bin/bash -c "source ~/.profile && nvm install {{ node_version }}"
