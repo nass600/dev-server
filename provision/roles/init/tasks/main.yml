@@ -1,5 +1,5 @@
 ---
-- name: Update apt
+- name: Update APT
   sudo: yes
   apt:  update_cache=yes
 
@@ -12,11 +12,11 @@
     - build-essential
     - python-software-properties
 
-- name: Add ppa repository
+- name: Add PPA repository
   sudo: yes
   apt_repository: repo=ppa:ondrej/php5
 
-- name: Update apt again
+- name: Update APT again
   sudo: yes
   apt:  update_cache=yes
 

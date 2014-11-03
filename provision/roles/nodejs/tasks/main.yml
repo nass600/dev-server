@@ -2,7 +2,16 @@
 - name: Install NVM
   sudo: no
   shell: curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+  register: nvm_install_result
+  changed_when: "'already installed' not in nvm_install_result.stdout"
+  failed_when: "nvm_install_result.stderr"
+
+- name: Source NVM
+  sudo: no
+  lineinfile: >
+    dest=~/.profile
+    line="source ~/.nvm/nvm.sh"
 
 - name: Install nodeJS
   sudo: no
-  shell: /bin/bash -c "source ~/.profile && nvm install {{ node_version }}"
+  command: nvm install {{ node_version }}
