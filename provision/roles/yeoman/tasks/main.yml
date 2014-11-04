@@ -1,4 +1,0 @@
----
-- name: Install yeoman
-  sudo: no
-  npm: name=yo global=yes

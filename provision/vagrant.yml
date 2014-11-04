@@ -2,6 +2,7 @@
 - hosts: all
   sudo: true
   vars:
+    home_dir: /home/vagrant
     php_packages:
       - { name: dev, package: php5-dev }
       - { name: pear, package: php-pear }
@@ -14,6 +15,10 @@
       - { name: "mongo", package: "pecl.php.net/mongo" }
     pear_packages:
       - { channel: "pear.phing.info", package: "phing/phing" }
+    npm_packages:
+      - bower
+      - grunt-cli
+      - yo
     node_version: 0.11.14
   roles:
     - init
@@ -25,4 +30,3 @@
     - composer
     - redis
     - nodejs
-    - yeoman
