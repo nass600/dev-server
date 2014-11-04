@@ -25,3 +25,13 @@
   apt:  pkg={{ item }} state=latest
   with_items:
     - mcrypt
+
+- name: Copy dotfiles
+  template: src={{ item }}.tpl dest={{ home_dir }}/.{{ item }}
+  with_items:
+    - bashrc
+    - bash_aliases
+
+- name: Set locale
+  sudo: yes
+  command: /usr/sbin/update-locale LANG={{ locale }} LC_ALL={{ locale }}

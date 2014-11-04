@@ -2,6 +2,7 @@
 - hosts: all
   sudo: true
   vars:
+    locale: en_US.UTF-8
     home_dir: /home/vagrant
     php_packages:
       - { name: dev, package: php5-dev }
@@ -11,6 +12,7 @@
       - { name: mcrypt, package: php5-mcrypt }
       - { name: mysql, package: php5-mysql }
       - { name: redis, package: php5-redis }
+      - { name: imagick, package: php5-imagick }
     php_extensions:
       - { name: "mongo", package: "pecl.php.net/mongo" }
     pear_packages:
@@ -25,6 +27,7 @@
     - git
     - nginx
     - mysql
+    - sqlite
     - mongo
     - php5
     - composer
