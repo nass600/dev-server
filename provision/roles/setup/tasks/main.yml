@@ -31,7 +31,12 @@
   with_items:
     - bashrc
     - bash_aliases
+    - gitconfig
 
 - name: Set locale
   sudo: yes
   command: /usr/sbin/update-locale LANG={{ locale }} LC_ALL={{ locale }}
+
+- name: Create Workspace directory
+  sudo: no
+  command: mkdir -p ~/Workspace

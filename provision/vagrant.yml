@@ -17,13 +17,14 @@
       - { name: "mongo", package: "pecl.php.net/mongo" }
     pear_packages:
       - { channel: "pear.phing.info", package: "phing/phing" }
+      - { channel: "pear.phpunit.de", package: "phpunit/PHPUnit" }
     npm_packages:
       - bower
       - grunt-cli
       - yo
     node_version: 0.11.14
   roles:
-    - init
+    - setup
     - git
     - nginx
     - mysql
