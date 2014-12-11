@@ -40,3 +40,7 @@
 - name: Create Workspace directory
   sudo: no
   command: mkdir -p ~/Workspace
+
+- name: Adding ssh key to agent
+  sudo: no
+  command: ssh-add
