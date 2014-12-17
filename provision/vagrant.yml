@@ -4,6 +4,7 @@
   vars:
     locale: en_US.UTF-8
     home_dir: /home/vagrant
+    swap_file_path: /var/swap.1
     php_packages:
       - { name: dev, package: php5-dev }
       - { name: pear, package: php-pear }
@@ -23,6 +24,9 @@
       - bower
       - grunt-cli
       - yo
+    ruby_gems:
+      - sass
+      - compass
     node_version: 0.11.14
   roles:
     - setup
@@ -35,3 +39,4 @@
     - composer
     - redis
     - nodejs
+    - ruby
