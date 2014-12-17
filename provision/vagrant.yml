@@ -29,7 +29,9 @@
       - compass
     node_version: 0.11.14
   roles:
+    - swap
     - setup
+    - dotfiles
     - git
     - nginx
     - mysql
