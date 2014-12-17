@@ -31,6 +31,7 @@
   roles:
     - swap
     - setup
+    - archey
     - dotfiles
     - git
     - nginx
