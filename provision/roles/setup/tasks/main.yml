@@ -23,8 +23,7 @@
 - name: Install extra packages
   sudo: yes
   apt:  pkg={{ item }} state=latest
-  with_items:
-    - mcrypt
+  with_items: extra_packages
 
 - name: Set locale
   sudo: yes

@@ -1,0 +1,6 @@
+---
+node_version: 0.11.14
+npm_packages:
+  - bower
+  - grunt-cli
+  - yo

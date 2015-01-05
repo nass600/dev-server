@@ -1,8 +1,4 @@
 ---
 - name: Copy dotfiles
-  template: src={{ item }}.tpl dest={{ home_dir }}/.{{ item }}
-  with_items:
-    - bashrc
-    - bash_aliases
-    - gitconfig
-    - gitignore
+  template: src={{ item }}.j2 dest={{ home }}/.{{ item }}
+  with_items: dotfiles

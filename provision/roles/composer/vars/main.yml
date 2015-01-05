@@ -1,0 +1,4 @@
+---
+composer_packages:
+  - { package: phpunit/phpunit, version: "*" }
+  - { package: phing/phing, version: "*" }

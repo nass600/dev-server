@@ -2,32 +2,8 @@
 - hosts: all
   sudo: true
   vars:
-    locale: en_US.UTF-8
-    home_dir: /home/vagrant
-    swap_file_path: /var/swap.1
-    php_packages:
-      - { name: dev, package: php5-dev }
-      - { name: pear, package: php-pear }
-      - { name: xdebug, package: php5-xdebug }
-      - { name: curl, package: php5-curl }
-      - { name: mcrypt, package: php5-mcrypt }
-      - { name: mysql, package: php5-mysql }
-      - { name: redis, package: php5-redis }
-      - { name: imagick, package: php5-imagick }
-      - { name: intl, package: php5-intl }
-    php_extensions:
-      - { name: "mongo", package: "pecl.php.net/mongo" }
-    pear_packages:
-      - { channel: "pear.phing.info", package: "phing/phing" }
-      - { channel: "pear.phpunit.de", package: "phpunit/PHPUnit" }
-    npm_packages:
-      - bower
-      - grunt-cli
-      - yo
-    ruby_gems:
-      - sass
-      - compass
-    node_version: 0.11.14
+    user: vagrant
+    home: /home/{{ user }}
   roles:
     - swap
     - setup
