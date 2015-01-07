@@ -10,3 +10,4 @@ php_packages:
   - { name: imagick, package: php5-imagick }
   - { name: intl, package: php5-intl }
   - { name: mongo, package: php5-mongo }
+  - { name: gd, package: php5-gd }
