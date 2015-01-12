@@ -2,3 +2,4 @@
 composer_packages:
   - { package: phpunit/phpunit, version: "*" }
   - { package: phing/phing, version: "*" }
+  - { package: squizlabs/php_codesniffer, version: "*" }
