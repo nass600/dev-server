@@ -4,3 +4,6 @@ npm_packages:
   - bower
   - grunt-cli
   - yo
+  - gulp
+  - generator-angular
+  - generator-gulp-angular
