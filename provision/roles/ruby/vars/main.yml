@@ -2,3 +2,4 @@
 ruby_gems:
   - sass
   - compass
+  - capifony

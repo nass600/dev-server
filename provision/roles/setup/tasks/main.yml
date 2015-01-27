@@ -6,11 +6,7 @@
 - name: Install system packages
   sudo: yes
   apt:  pkg={{ item }} state=latest
-  with_items:
-    - curl
-    - wget
-    - build-essential
-    - python-software-properties
+  with_items: system_packages
 
 - name: Add PPA repository
   sudo: yes
@@ -20,10 +16,9 @@
   sudo: yes
   apt:  update_cache=yes
 
-- name: Install extra packages
+- name: Run cachefilesd
   sudo: yes
-  apt:  pkg={{ item }} state=latest
-  with_items: extra_packages
+  template: src=cachefilesd.j2 dest=/etc/default/cachefilesd
 
 - name: Set locale
   sudo: yes

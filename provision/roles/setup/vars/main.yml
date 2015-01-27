@@ -1,4 +1,9 @@
 ---
 locale: en_US.UTF-8
-extra_packages:
+system_packages:
   - mcrypt
+  - cachefilesd
+  - curl
+  - wget
+  - build-essential
+  - python-software-properties
