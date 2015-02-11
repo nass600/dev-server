@@ -12,3 +12,4 @@ php_packages:
   - { name: intl, package: php5-intl }
   - { name: mongo, package: php5-mongo }
   - { name: gd, package: php5-gd }
+  - { name: xsl, package: php5-xsl }
