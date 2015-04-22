@@ -9,6 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network "forwarded_port", guest: 80, host: 8080      #Web
   config.vm.network "forwarded_port", guest: 3000, host: 3000    #BrowserSync
+  config.vm.network "forwarded_port", guest: 3306, host: 3306    #MySQL
   config.vm.network "forwarded_port", guest: 9876, host: 9876    #Karma
   config.vm.network "forwarded_port", guest: 27017, host: 27017  #MongoDB
 
