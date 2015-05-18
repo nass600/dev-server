@@ -1,7 +1,7 @@
 ---
 - name: Install MySQL server
   sudo: yes
-  apt:  pkg=mysql-server state=latest
+  apt:  pkg=mysql-server-5.6 state=latest
 
 - name: Allow access to MySQL from anywhere
   sudo: yes
