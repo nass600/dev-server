@@ -6,6 +6,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "ubuntu/trusty64"
+  config.vm.hostname = "BULLIT"
 
   config.vm.network "forwarded_port", guest: 80, host: 8080      #Web
   config.vm.network "forwarded_port", guest: 3000, host: 3000    #BrowserSync
@@ -20,8 +21,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder "../..", "/home/vagrant/Workspace", type: "nfs", :mount_options => ['actimeo=2', 'rw', 'vers=3', 'tcp', 'fsc']
 
   config.vm.provider "virtualbox" do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "1024"]
-    vb.name = "symfony_server"
+    vb.customize ["modifyvm", :id, "--memory", "2048"]
+    vb.name = "nass600_server"
   end
 
   config.vm.provision :ansible do |ansible|

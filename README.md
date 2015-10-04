@@ -1,4 +1,4 @@
-# Vagrant (Ansible) Symfony2
+# Development Server
 
 Ubuntu 14.04 LTS virtual environment for Symfony 2 apps via Vagrant and Ansible.
 
