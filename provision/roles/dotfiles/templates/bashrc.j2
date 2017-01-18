@@ -53,4 +53,15 @@ fi
 
 export PATH=~/.composer/vendor/bin:$PATH
 
-PS1='\[\033[01;31m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
+############################################################
+# Powerline configuration
+############################################################
+
+powerline_info=$(pip show powerline-status | grep Location)
+if [ -n "$powerline_info" ]; then
+    powerline_repo=${powerline_info#Location: }
+    powerline-daemon -q
+    POWERLINE_BASH_CONTINUATION=1
+    POWERLINE_BASH_SELECT=1
+    . ${powerline_repo}/powerline/bindings/bash/powerline.sh
+fi

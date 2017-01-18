@@ -1,0 +1,45 @@
+---
+- name: Installing Powerline pip packages
+  become: true
+  pip:
+    name: "{{ item }}"
+  with_items: "{{ powerline_pip_packages }}"
+
+- name: Creating Powerline config directory
+  file:
+    path: "{{ powerline_config_dir }}"
+    state: directory
+
+- name: Creating Powerline config themes directory
+  file:
+    path: "{{ powerline_config_dir }}/themes/shell"
+    state: directory
+
+- name: Creating Powerline config colorschemes directory
+  file:
+    path: "{{ powerline_config_dir }}/colorschemes/shell"
+    state: directory
+
+- name: Copy main Powerline config
+  template:
+    src: powerline_config.json.j2
+    dest: "{{ powerline_config_dir }}/config.json"
+
+- name: Copy Powerline theme config
+  template:
+    src: powerline_theme_default.json.j2
+    dest: "{{ powerline_config_dir }}/themes/shell/{{ powerline_theme }}.json"
+
+- name: Copy Powerline colorscheme config
+  template:
+    src: powerline_colorscheme_default.json.j2
+    dest: "{{ powerline_config_dir }}/colorschemes/shell/default.json"
+
+- name: Cloning Powerline fonts
+  git:
+    repo: "git@github.com:powerline/fonts"
+    dest: "{{ powerline_config_dir }}/fonts"
+    accept_hostkey: yes
+
+- name: Installing Powerline fonts
+  shell: "{{ powerline_config_dir }}/fonts/install.sh"

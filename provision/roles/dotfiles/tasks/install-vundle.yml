@@ -1,0 +1,19 @@
+---
+- name: Make Vim directory
+  file:
+    path: "{{ vundle_config_dir }}"
+    state: directory
+
+- name: Make Vim bundle directory
+  file:
+    path: "{{ vundle_config_dir }}/bundle"
+    state: directory
+
+- name: Clone vundle
+  git:
+    repo: "{{ vundle_repo }}"
+    dest: "{{ vundle_config_dir }}/bundle/Vundle.vim"
+    update: no
+
+- name: Install Vim plugins
+  command: "vim +PluginInstall +qal"

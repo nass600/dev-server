@@ -1,29 +1,27 @@
 ---
 - name: Update APT
-  sudo: yes
+  become: yes
   apt:  update_cache=yes
 
 - name: Install system packages
-  sudo: yes
-  apt:  pkg={{ item }} state=latest
-  with_items: system_packages
-
-- name: Add PPA repository
-  sudo: yes
-  apt_repository: repo=ppa:ondrej/php5
+  become: yes
+  apt:  pkg="{{ item }}" state=latest
+  with_items: "{{ system_packages }}"
 
 - name: Update APT again
-  sudo: yes
+  become: yes
   apt:  update_cache=yes
 
 - name: Run cachefilesd
-  sudo: yes
+  become: yes
   template: src=cachefilesd.j2 dest=/etc/default/cachefilesd
 
 - name: Set locale
-  sudo: yes
-  command: /usr/sbin/update-locale LANG={{ locale }} LC_ALL={{ locale }}
+  become: yes
+  command: "/usr/sbin/update-locale LANG={{ locale }} LC_ALL={{ locale }}"
 
 - name: Create Workspace directory
-  sudo: no
-  command: mkdir -p ~/Workspace
+  become: no
+  file:
+    path: ~/Workspace
+    state: directory

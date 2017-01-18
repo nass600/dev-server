@@ -4,3 +4,4 @@ dotfiles:
   - bash_aliases
   - gitconfig
   - gitignore
+  - vimrc

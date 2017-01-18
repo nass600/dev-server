@@ -1,4 +1,10 @@
 ---
 - name: Copy dotfiles
-  template: src={{ item }}.j2 dest={{ home }}/.{{ item }}
-  with_items: dotfiles
+  template:
+    src: "{{ item }}.j2"
+    dest: "{{ home }}/.{{ item }}"
+  with_items: "{{ dotfiles }}"
+
+- include: install-powerline.yml
+
+- include: install-vundle.yml

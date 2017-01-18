@@ -1,5 +1,6 @@
 ---
 - name: Create swap file
+  become: true
   command: dd if=/dev/zero of={{ swap_file_path }} bs=1M count=1024
            creates="{{ swap_file_path }}"
   tags:
@@ -7,6 +8,7 @@
 
 
 - name: Change swap file permissions
+  become: true
   file: path="{{ swap_file_path }}"
         owner=root
         group=root
@@ -16,6 +18,7 @@
 
 
 - name: "Check swap file type"
+  become: true
   command: file {{ swap_file_path }}
   register: swapfile
   tags:
@@ -23,13 +26,15 @@
 
 
 - name: Make swap file
-  command: "sudo mkswap {{ swap_file_path }}"
+  become: true
+  command: "mkswap {{ swap_file_path }}"
   when: swapfile.stdout.find('swap file') == -1
   tags:
     - swap.file.mkswap
 
 
 - name: Write swap entry in fstab
+  become: true
   mount: name=none
          src={{ swap_file_path }}
          fstype=swap
@@ -42,6 +47,7 @@
 
 
 - name: Mount swap
+  become: true
   command: "swapon {{ swap_file_path }}"
   when: ansible_swaptotal_mb < 1
   tags:

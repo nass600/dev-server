@@ -36,8 +36,8 @@ You must have installed the following tools in order to work:
 Download the vagrant machine, start it and you are ready to go:
 
 ```bash
-git clone git@github.com:nass600/vagrant-symfony2
-cd vagrant-symfony2
+git clone git@github.com:nass600/dev-server
+cd dev-server
 vagrant up
 ```
 

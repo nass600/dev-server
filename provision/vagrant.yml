@@ -1,15 +1,13 @@
 ---
 - hosts: all
-  sudo: true
   vars:
     user: vagrant
     home: /home/{{ user }}
   roles:
     - swap
     - setup
-    - archey
-    - dotfiles
     - git
+    - dotfiles
     - nginx
     - mysql
     - sqlite

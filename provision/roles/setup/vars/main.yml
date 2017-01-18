@@ -7,3 +7,4 @@ system_packages:
   - wget
   - build-essential
   - python-software-properties
+  - python-pip

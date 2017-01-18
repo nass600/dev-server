@@ -1,3 +1,7 @@
 ---
 - name: restart mongodb
-  service: name=mongodb enabled=yes state=restarted
+  become: true
+  service:
+    name: mongodb
+    enabled: yes
+    state: restarted
