@@ -2,9 +2,14 @@
 - hosts: all
   become: true
   vars:
-    user: ubuntu
+    user: vagrant
     home: "/home/{{ user }}"
     become_user: "{{ user }}"
+  pre_tasks:
+    - name: "Add repository for PHP 7.0."
+      apt_repository:
+        repo: "ppa:ondrej/php"
+        update_cache: yes
   roles:
     - geerlingguy.git
     - dotfiles
@@ -12,14 +17,12 @@
     - jdauphant.nginx
     - geerlingguy.php
     - geerlingguy.composer
+    - geerlingguy.nodejs
 #    - setup
-#    - git
-#    - dotfiles
 #    - nginx
 #    - mysql
 #    - sqlite
 #    - mongo
-#    - php5
 #    - composer
 #    - redis
 #    - nodejs

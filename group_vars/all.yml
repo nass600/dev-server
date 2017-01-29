@@ -26,18 +26,12 @@ git_version: "2.11.0"
 #  - bower
 #nvm_users:
 #  - "{{ user }}"
-#
-#
-## Role: Pip (pip)
-## ----------------------------------------------------
-#
-#pip_packages:
-#  - { name: virtualenv, version: 13.1.2 }
 
 
 # Role: PHP (geerlinguy.php)
 # ----------------------------------------------------
 
+php_version: "7.0"
 php_enable_php_fpm: true
 php_webserver_daemon: "nginx"
 
@@ -56,13 +50,7 @@ php_webserver_daemon: "nginx"
 #  - php5-imagick
 #  - php-pear
 #  - php-apc
-#
-#
-## Role: PHP-FPM
-## ----------------------------------------------------
-#
-#php_fpm_user: "{{ user }}"
-#
+
 
 # Role: Composer (geerlinguy.composer)
 # ----------------------------------------------------
@@ -72,6 +60,32 @@ composer_home_owner: "{{ user }}"
 composer_home_group: "{{ user }}"
 composer_global_packages:
   - { name: consolidation/robo, release: "1.0.5" }
+
+
+
+# Role: Nginx (jdauphant.nginx)
+# ----------------------------------------------------
+
+nginx_user: "{{ user }}"
+
+#nginx_sites:
+#  api: "{{ api_vhost }}"
+#  marketplace: "{{ marketplace_vhost }}"
+#  website: "{{ website_vhost }}"
+#  teaser: "{{ teaser_vhost }}"
+#
+#
+
+# Role: Nodejs (geerlingguy.nodejs)
+# ----------------------------------------------------
+
+nodejs_version: "0.12"
+nodejs_install_npm_user: "{{ user }}"
+nodejs_npm_global_packages:
+  - name: grunt-cli
+    version: 1.2.0
+  - name: bower
+    version: 1.8.0
 
 
 ## Role: PostgreSQL (ANXS.postgresql)
@@ -114,32 +128,3 @@ composer_global_packages:
 #mysql_users:
 #  - "{{ website_user }}"
 #
-#
-## Role: Nginx (jdauphant.nginx)
-## ----------------------------------------------------
-#
-#nginx_user: "{{ user }}"
-#
-#nginx_sites:
-#  api: "{{ api_vhost }}"
-#  marketplace: "{{ marketplace_vhost }}"
-#  website: "{{ website_vhost }}"
-#  teaser: "{{ teaser_vhost }}"
-#
-#
-## Role: Supervisor
-## ----------------------------------------------------
-#
-#supervisor_programs:
-#  api:
-#    - command = "{{ workspace_path }}/api/bin/gunicorn_start"
-#    - user = {{ user }}
-#    - stdout_logfile = /var/log/supervisor/api.log
-#    - redirect_stderr = true
-#    - environment=LANG=en_US.UTF-8,LC_ALL=en_US.UTF-8
-#
-#
-## Role: Java (williamyeh.oracle-java)
-## ----------------------------------------------------
-#
-#java_version: 8

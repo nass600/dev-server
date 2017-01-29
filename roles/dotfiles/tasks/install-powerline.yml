@@ -15,33 +15,46 @@
   file:
     path: "{{ powerline_config_dir }}"
     state: directory
+    owner: "{{ user }}"
+    group: "{{ user }}"
 
 - name: Creating Powerline config themes directory
   file:
     path: "{{ powerline_config_dir }}/themes/shell"
     state: directory
+    owner: "{{ user }}"
+    group: "{{ user }}"
 
 - name: Creating Powerline config colorschemes directory
   file:
     path: "{{ powerline_config_dir }}/colorschemes/shell"
     state: directory
+    owner: "{{ user }}"
+    group: "{{ user }}"
 
 - name: Copy main Powerline config
   template:
     src: powerline_config.json.j2
     dest: "{{ powerline_config_dir }}/config.json"
+    owner: "{{ user }}"
+    group: "{{ user }}"
 
 - name: Copy Powerline theme config
   template:
     src: powerline_theme_default.json.j2
     dest: "{{ powerline_config_dir }}/themes/shell/{{ powerline_theme }}.json"
+    owner: "{{ user }}"
+    group: "{{ user }}"
 
 - name: Copy Powerline colorscheme config
   template:
     src: powerline_colorscheme_default.json.j2
     dest: "{{ powerline_config_dir }}/colorschemes/shell/default.json"
+    owner: "{{ user }}"
+    group: "{{ user }}"
 
 - name: Cloning Powerline fonts
+  become_user: "{{ user }}"
   git:
     repo: "{{ powerline_fonts_repo }}"
     dest: "{{ powerline_config_dir }}/fonts"

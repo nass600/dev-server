@@ -1,4 +1,4 @@
 .vagrant
-provision/vagrant.retry
+*.retry
 *.log
-provision/roles/*.*/
+roles/*.*/

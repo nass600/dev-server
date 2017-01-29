@@ -1,6 +1,0 @@
----
-- name: Install nginx
-  become: yes
-  apt:
-    pkg: nginx
-    state: latest

@@ -3,6 +3,8 @@
   template:
     src: "{{ item }}.j2"
     dest: "{{ home }}/.{{ item }}"
+    owner: "{{ user }}"
+    group: "{{ user }}"
   with_items: "{{ dotfiles }}"
 
 - include: install-powerline.yml
