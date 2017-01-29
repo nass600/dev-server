@@ -38,6 +38,7 @@ Download the vagrant machine, start it and you are ready to go:
 ```bash
 git clone git@github.com:nass600/dev-server
 cd dev-server
+ansible-galaxy install -r requirements.yml --ignore-errors
 vagrant up
 ```
 

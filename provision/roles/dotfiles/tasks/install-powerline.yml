@@ -1,4 +1,10 @@
 ---
+- name: Installing Pip
+  become: true
+  apt:
+    pkg: "python-pip"
+    state: latest
+
 - name: Installing Powerline pip packages
   become: true
   pip:
@@ -37,7 +43,7 @@
 
 - name: Cloning Powerline fonts
   git:
-    repo: "git@github.com:powerline/fonts"
+    repo: "{{ powerline_fonts_repo }}"
     dest: "{{ powerline_config_dir }}/fonts"
     accept_hostkey: yes
 

@@ -8,3 +8,5 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore
+[alias]
+    kill = "!f(){ git branch -D \"$1\";  git push origin --delete \"$1\"; };f"

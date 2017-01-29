@@ -1,0 +1,13 @@
+---
+#ansible_ssh_private_key_file: ~/.ssh/fleet.pem
+#ansible_ssh_user: ubuntu
+#
+#
+## Projects
+## ----------------------------------------------------
+#
+#website_server_name: "gofleet.io www.gofleet.io getfleet.co www.getfleet.co"
+#api_server_name: "{{ api_project_name }}.getfleet.co"
+#api_project_wsgi: wsgi_prod
+#marketplace_server_name: "{{ marketplace_project_name }}.getfleet.co"
+#teaser_server_name: "{{ teaser_project_name }}.getflee.co"

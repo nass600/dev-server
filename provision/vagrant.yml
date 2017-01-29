@@ -1,19 +1,26 @@
 ---
 - hosts: all
+  become: true
   vars:
-    user: vagrant
-    home: /home/{{ user }}
+    user: ubuntu
+    home: "/home/{{ user }}"
+    become_user: "{{ user }}"
   roles:
-    - swap
-    - setup
-    - git
+    - geerlingguy.git
     - dotfiles
-    - nginx
-    - mysql
-    - sqlite
-    - mongo
-    - php5
-    - composer
-    - redis
-    - nodejs
-    - ruby
+    - mikegleasonjr.swap
+    - jdauphant.nginx
+    - geerlingguy.php
+    - geerlingguy.composer
+#    - setup
+#    - git
+#    - dotfiles
+#    - nginx
+#    - mysql
+#    - sqlite
+#    - mongo
+#    - php5
+#    - composer
+#    - redis
+#    - nodejs
+#    - ruby

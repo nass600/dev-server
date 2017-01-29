@@ -1,2 +1,4 @@
 .vagrant
 provision/vagrant.retry
+*.log
+provision/roles/*.*/

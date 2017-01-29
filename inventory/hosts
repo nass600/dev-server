@@ -1,0 +1,5 @@
+[local]
+127.0.0.1
+
+[production]
+ec2-52-35-69-208.us-west-2.compute.amazonaws.com

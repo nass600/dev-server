@@ -1,0 +1,15 @@
+
+- src: geerlingguy.composer
+  version: "1.5.0"
+
+- src: geerlingguy.php
+  version: "3.4.4"
+
+- src: mikegleasonjr.swap
+  version: "0.0.3"
+
+- src: jdauphant.nginx
+  version: "v2.7.4"
+
+- src: geerlingguy.git
+  version: "1.2.1"
