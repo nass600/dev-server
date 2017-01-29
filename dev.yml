@@ -18,12 +18,4 @@
     - geerlingguy.php
     - geerlingguy.composer
     - geerlingguy.nodejs
-#    - setup
-#    - nginx
-#    - mysql
-#    - sqlite
-#    - mongo
-#    - composer
-#    - redis
-#    - nodejs
-#    - ruby
+    - geerlingguy.postgresql

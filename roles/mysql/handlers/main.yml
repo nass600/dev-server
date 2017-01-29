@@ -1,7 +1,0 @@
----
-- name: restart mysql
-  become: true
-  service:
-    name: mysql
-    enabled: yes
-    state: restarted

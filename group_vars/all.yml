@@ -1,31 +1,10 @@
 ---
-
-# Role: Setup (setup)
-# ----------------------------------------------------
-
-locale: en_US.UTF-8
-workspace_path: "{{ home }}/Workspace/nass600"
-
-
 # Role: Git (geerlingguy.git)
 # ----------------------------------------------------
 
 git_install_from_source: true
 git_install_path: "/usr"
 git_version: "2.11.0"
-
-
-## Nvm: Nvm (pablocrivella.nvm)
-## ----------------------------------------------------
-#
-#nvm_version: v0.29.0
-#nvm_node_versions:
-#  - v5.1.0
-#nvm_global_packages:
-#  - grunt-cli
-#  - bower
-#nvm_users:
-#  - "{{ user }}"
 
 
 # Role: PHP (geerlinguy.php)
@@ -35,22 +14,22 @@ php_version: "7.0"
 php_enable_php_fpm: true
 php_webserver_daemon: "nginx"
 
-#php_packages:
-#  - php5
-#  - php5-mysql
-#  - php5-mcrypt
-#  - php5-cli
-#  - php5-common
-#  - php5-curl
-#  - php5-dev
-#  - php5-fpm
-#  - php5-gd
-#  - php5-xsl
-#  - php5-intl
-#  - php5-imagick
-#  - php-pear
-#  - php-apc
-
+php_packages:
+  - php7.0-common
+  - php7.0-cli
+  - php7.0-dev
+  - php7.0-fpm
+  - libpcre3-dev
+  - php7.0-gd
+  - php7.0-curl
+  - php7.0-imap
+  - php7.0-json
+  - php7.0-opcache
+  - php7.0-xml
+  - php7.0-mbstring
+  - php-sqlite3
+  - php-apcu
+  - php7.0-pgsql
 
 # Role: Composer (geerlinguy.composer)
 # ----------------------------------------------------
@@ -62,19 +41,11 @@ composer_global_packages:
   - { name: consolidation/robo, release: "1.0.5" }
 
 
-
 # Role: Nginx (jdauphant.nginx)
 # ----------------------------------------------------
 
 nginx_user: "{{ user }}"
 
-#nginx_sites:
-#  api: "{{ api_vhost }}"
-#  marketplace: "{{ marketplace_vhost }}"
-#  website: "{{ website_vhost }}"
-#  teaser: "{{ teaser_vhost }}"
-#
-#
 
 # Role: Nodejs (geerlingguy.nodejs)
 # ----------------------------------------------------
@@ -88,43 +59,10 @@ nodejs_npm_global_packages:
     version: 1.8.0
 
 
-## Role: PostgreSQL (ANXS.postgresql)
+## Role: PostgreSQL (geerlingguy.postgresql)
 ## ----------------------------------------------------
-#
-#postgresql_ext_install_dev_headers: yes
-#postgresql_pg_hba_default:
-#  - { type: local, database: all, user: '{{ postgresql_admin_user }}', address: '', method: '{{ postgresql_default_auth_method }}', comment: '' }
-#  - { type: local, database: all, user: all, address: '',             method: '{{ postgresql_default_auth_method }}', comment: '"local" is for Unix domain socket connections only' }
-#  - { type: host,  database: all, user: all, address: '127.0.0.1/32', method: '{{ postgresql_default_auth_method }}', comment: 'IPv4 local connections:' }
-#  - { type: host,  database: all, user: all, address: '::1/128',      method: '{{ postgresql_default_auth_method }}', comment: 'IPv6 local connections:' }
-#  - { type: host,  database: all, user: all, address: '192.168.2.1/32', method: '{{ postgresql_default_auth_method }}', comment: 'IPv6 local connections:' }
-#
-#postgresql_listen_addresses:
-#  - "*"
-#
-#postgresql_databases:
-#  - name: api
-#    hstore: no
-#    uuid_ossp: no
-#    citext: no
-#
-#postgresql_users:
-#  - name: root
-#    pass: ""
-#    encrypted: no
-#
-#postgresql_user_privileges:
-#  - name: root
-#    db: api
-#    priv: "ALL"
-#    role_attr_flags: "CREATEDB"
-#
-#
-## Role: MySQL (geerligguy.mysql)
-## ----------------------------------------------------
-#
-#mysql_databases:
-#  - "{{ website_database }}"
-#mysql_users:
-#  - "{{ website_user }}"
-#
+
+postgresql_users:
+  - name: root
+    password: "root"
+    role_attr_flags: "CREATEDB"

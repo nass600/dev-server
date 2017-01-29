@@ -1,7 +1,0 @@
----
-- name: restart mongodb
-  become: true
-  service:
-    name: mongodb
-    enabled: yes
-    state: restarted
