@@ -21,4 +21,5 @@
     update: no
 
 - name: Install Vim plugins
+  become_user: "{{ user }}"
   command: "vim +PluginInstall +qal"

@@ -6,7 +6,21 @@
     home: "/home/{{ user }}"
     become_user: "{{ user }}"
   pre_tasks:
-    - name: "Add repository for PHP 7.0."
+    - name: Install apt packages
+      apt:
+        name: unzip
+        state: present
+        update_cache: yes
+    - name: Add known hosts
+      known_hosts:
+        path: "{{ home }}/.ssh/known_hosts"
+        name: "{{ item }}"
+        key: "{{ lookup('pipe', 'ssh-keyscan -t rsa ' ~ item) }}"
+      become_user: "{{ user }}"
+      with_items:
+        - github.com
+        - bitbucket.org
+    - name: Add repository for PHP 7.0.
       apt_repository:
         repo: "ppa:ondrej/php"
         update_cache: yes
