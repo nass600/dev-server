@@ -1,4 +1,13 @@
 ---
+# Role: Apt (Stouts.apt)
+# ----------------------------------------------------
+
+apt_repositories:
+  - ppa:ondrej/php
+apt_default_packages:
+  - unzip
+
+
 # Role: Git (geerlingguy.git)
 # ----------------------------------------------------
 
