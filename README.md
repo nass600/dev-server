@@ -6,10 +6,10 @@ Ubuntu 14.04 LTS virtual environment for PHP apps via Vagrant and Ansible.
 
 ## Installed Software
 
-| ![](docs/img/nginx.png) | ![](docs/img/postgresql.png) |
-|:-----------------------:|:----------------------------:|
-| Nginx                   | PostgreSQL                   |
-| 1.4.6                   | 9.3.15                       |
+| ![](docs/img/ubuntu.png) | ![](docs/img/git.png) | ![](docs/img/nginx.png)  | ![](docs/img/postgresql.png) |
+|:------------------------:|:----------------------|:------------------------:|:----------------------------:|
+| Ubuntu                   | Git                   | Nginx                    | PostgreSQL                   |
+| 14.04 LTS                | 2.11.0                | 1.4.6                    | 9.3.15                       |
 
 | ![](docs/img/php.png) | ![](docs/img/composer.png) | ![](docs/img/robo.png) |
 |:---------------------:|:--------------------------:|:----------------------:|
