@@ -11,15 +11,10 @@ Ubuntu 14.04 LTS virtual environment for PHP apps via Vagrant and Ansible.
 | Ubuntu                   | Git                   | Nginx                    | PostgreSQL                   |
 | 14.04 LTS                | 2.11.0                | 1.4.6                    | 9.3.15                       |
 
-| ![](docs/img/php.png) | ![](docs/img/composer.png) | ![](docs/img/robo.png) |
-|:---------------------:|:--------------------------:|:----------------------:|
-| PHP                   | Composer                   | Robo                   |
-| 7.0.15                | 1.3.2                      | 1.0.5                  |
-
-| ![](docs/img/nodejs.png) | ![](docs/img/grunt.png) | ![](docs/img/bower.png) |
-|:------------------------:|:-----------------------:|:-----------------------:|
-| NodeJS                   | Grunt                   | Bower                   |
-| 0.12.0                   | 1.2.0                   | 1.8.0                   |
+| ![](docs/img/php.png) | ![](docs/img/composer.png) | ![](docs/img/robo.png) | ![](docs/img/nodejs.png) | ![](docs/img/grunt.png) | ![](docs/img/bower.png) |
+|:---------------------:|:--------------------------:|:----------------------:|:------------------------:|:-----------------------:|:-----------------------:|
+| PHP                   | Composer                   | Robo                   | NodeJS                   | Grunt                   | Bower                   |
+| 7.0.15                | 1.3.2                      | 1.0.5                  | 0.12.0                   | 1.2.0                   | 1.8.0                   |
 
 
 <br>
