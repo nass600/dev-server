@@ -1,22 +1,21 @@
 # Development Server
 
-Ubuntu 14.04 LTS virtual environment for Symfony 2 apps via Vagrant and Ansible.
+Ubuntu 14.04 LTS virtual environment for PHP apps via Vagrant and Ansible.
 
 <br>
 
-## Installed tools
+## Installed Software
 
+| ![](docs/img/php.png =100x100) |   |   |   |   |
+|--------------------------------|---|---|---|---|
+| PHP |   |   |   |   |
+| 7.0 |   |   |   |   |
 + [Git](http://git-scm.com)
 + [Nginx](http://nginx.org/)
-+ [MySQL](http://www.mysql.com/)
-+ [SQLite](http://www.sqlite.org/)
-+ [MongoDB](http://www.mongodb.org/)
-+ [PHP 5.5](http://php.net/)
++ [PostgreSQL](https://www.postgresql.org/)
++ [PHP 7.0](http://php.net/)
 + [Composer](https://getcomposer.org/)
-+ [Redis](http://redis.io/)
-+ [RabbitMQ](http://www.rabbitmq.com/)
 + [Node.js](http://nodejs.org/)
-+ [Yeoman](http://yeoman.io/)
 + [Bower](http://bower.io/)
 + [Grunt](http://gruntjs.com/)
 
@@ -24,7 +23,7 @@ Ubuntu 14.04 LTS virtual environment for Symfony 2 apps via Vagrant and Ansible.
 
 ## Requirements
 
-You must have installed the following tools in order to work:
+You must have installed the following tools first:
 
 + [Vagrant](https://www.vagrantup.com/)
 + [Ansible](http://www.ansible.com/home)
