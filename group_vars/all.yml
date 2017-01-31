@@ -19,7 +19,7 @@ git_version: "2.11.0"
 # Role: PHP (geerlinguy.php)
 # ----------------------------------------------------
 
-php_version: "7.0"
+php_version: "7.0.15"
 php_enable_php_fpm: true
 php_webserver_daemon: "nginx"
 
@@ -71,6 +71,7 @@ nodejs_npm_global_packages:
 ## Role: PostgreSQL (geerlingguy.postgresql)
 ## ----------------------------------------------------
 
+postgresql_version: 9.3.5
 postgresql_users:
   - name: root
     password: "root"

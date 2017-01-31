@@ -6,18 +6,21 @@ Ubuntu 14.04 LTS virtual environment for PHP apps via Vagrant and Ansible.
 
 ## Installed Software
 
-| ![](docs/img/php.png =100x100) |   |   |   |   |
-|--------------------------------|---|---|---|---|
-| PHP |   |   |   |   |
-| 7.0 |   |   |   |   |
-+ [Git](http://git-scm.com)
-+ [Nginx](http://nginx.org/)
-+ [PostgreSQL](https://www.postgresql.org/)
-+ [PHP 7.0](http://php.net/)
-+ [Composer](https://getcomposer.org/)
-+ [Node.js](http://nodejs.org/)
-+ [Bower](http://bower.io/)
-+ [Grunt](http://gruntjs.com/)
+| ![](docs/img/nginx.png) | ![](docs/img/postgresql.png) |
+|:-----------------------:|:----------------------------:|
+| Nginx                   | PostgreSQL                   |
+| 1.4.6                   | 9.3.15                       |
+
+| ![](docs/img/php.png) | ![](docs/img/composer.png) | ![](docs/img/robo.png) |
+|:---------------------:|:--------------------------:|:----------------------:|
+| PHP                   | Composer                   | Robo                   |
+| 7.0.15                | 1.3.2                      | 1.0.5                  |
+
+| ![](docs/img/nodejs.png) | ![](docs/img/grunt.png) | ![](docs/img/bower.png) |
+|:------------------------:|:-----------------------:|:-----------------------:|
+| NodeJS                   | Grunt                   | Bower                   |
+| 0.12.0                   | 1.2.0                   | 1.8.0                   |
+
 
 <br>
 
@@ -25,8 +28,10 @@ Ubuntu 14.04 LTS virtual environment for PHP apps via Vagrant and Ansible.
 
 You must have installed the following tools first:
 
-+ [Vagrant](https://www.vagrantup.com/)
-+ [Ansible](http://www.ansible.com/home)
+
+| ![](docs/img/vagrant.png)             | ![](docs/img/ansible.png)              |
+|:-------------------------------------:|:--------------------------------------:|
+| [Vagrant](https://www.vagrantup.com/) | [Ansible](http://www.ansible.com/home) |
 
 <br>
 
