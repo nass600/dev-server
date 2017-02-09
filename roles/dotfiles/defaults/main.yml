@@ -1,9 +1,0 @@
----
-vundle_config_dir: "{{ home }}/.vim"
-vundle_repo: "git://github.com/VundleVim/Vundle.vim.git"
-powerline_fonts_repo: "git://github.com/powerline/fonts.git"
-powerline_theme: "default_leftonly"
-powerline_config_dir: "{{ home }}/.config/powerline"
-powerline_pip_packages:
-  - powerline-status
-  - powerline-gitstatus

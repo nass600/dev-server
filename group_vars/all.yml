@@ -1,4 +1,16 @@
 ---
+# Role: Powerline (nass600.powerline)
+# ----------------------------------------------------
+
+vundle_user: "{{ user }}"
+
+# Role: Powerline (nass600.powerline)
+# ----------------------------------------------------
+
+powerline_config_shell_colorscheme: "purple"
+powerline_config_shell_theme: "default_leftonly"
+powerline_daemon_destination: "~/.bash_profile"
+
 # Role: Apt (Stouts.apt)
 # ----------------------------------------------------
 
@@ -14,6 +26,20 @@ apt_default_packages:
 git_install_from_source: true
 git_install_path: "/usr"
 git_version: "2.11.0"
+
+
+# Role: Dotfiles (geerlingguy.dotfiles)
+# ----------------------------------------------------
+
+dotfiles_repo: "https://github.com/nass600/dotfiles.git"
+dotfiles_repo_local_destination: "~/.dotfiles"
+dotfiles_files:
+  - .bash_profile
+  - .bash_aliases
+  - .config
+  - .gitignore
+  - .gitconfig
+  - .vimrc
 
 
 # Role: PHP (geerlinguy.php)

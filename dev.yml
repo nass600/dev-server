@@ -18,7 +18,9 @@
   roles:
     - Stouts.apt
     - geerlingguy.git
-    - dotfiles
+    - geerlingguy.dotfiles
+    - nass600.powerline
+    - nass600.vundle
     - mikegleasonjr.swap
     - jdauphant.nginx
     - geerlingguy.php

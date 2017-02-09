@@ -1,7 +1,0 @@
----
-dotfiles:
-  - bashrc
-  - bash_aliases
-  - gitconfig
-  - gitignore
-  - vimrc
