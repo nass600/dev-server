@@ -6,7 +6,7 @@
   version: "1.0.0"
 
 - src: nass600.powerline
-  version: "1.0.0"
+  version: "1.0.1"
 
 - src: Stouts.apt
   version: "1.4.0"
