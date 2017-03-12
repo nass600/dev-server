@@ -24,6 +24,7 @@
     - mikegleasonjr.swap
     - jdauphant.nginx
     - geerlingguy.php
+    - geerlingguy.php-xdebug
     - geerlingguy.composer
     - geerlingguy.nodejs
     - geerlingguy.postgresql
