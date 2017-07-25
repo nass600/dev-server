@@ -28,3 +28,4 @@
     - geerlingguy.composer
     - geerlingguy.nodejs
     - geerlingguy.postgresql
+    - greendayonfire.mongodb

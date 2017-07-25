@@ -45,7 +45,6 @@ dotfiles_files:
 # Role: PHP (geerlinguy.php)
 # ----------------------------------------------------
 
-php_version: "7.0.15"
 php_enable_php_fpm: true
 php_webserver_daemon: "nginx"
 
@@ -65,6 +64,7 @@ php_packages:
   - php-sqlite3
   - php-apcu
   - php7.0-pgsql
+  - php7.0-imagick
 
 
 # Role: PHP Xdebug (geerlinguy.php-xdebug)
@@ -94,13 +94,11 @@ nginx_user: "{{ user }}"
 # Role: Nodejs (geerlingguy.nodejs)
 # ----------------------------------------------------
 
-nodejs_version: "6.x"
+nodejs_version: "8.x"
 nodejs_install_npm_user: "{{ user }}"
 nodejs_npm_global_packages:
   - name: grunt-cli
     version: 1.2.0
-  - name: bower
-    version: 1.8.0
 
 
 ## Role: PostgreSQL (geerlingguy.postgresql)
