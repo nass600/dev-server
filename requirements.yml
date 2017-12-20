@@ -1,39 +1,24 @@
 
 - src: geerlingguy.dotfiles
-  version: "1.1.0"
-
 - src: nass600.vundle
-  version: "1.0.0"
-
 - src: nass600.powerline
-  version: "1.0.1"
-
 - src: Stouts.apt
   version: "1.4.0"
-
 - src: geerlingguy.composer
   version: "1.5.0"
-
 - src: geerlingguy.php
   version: "3.4.4"
-
 - src: geerlingguy.php-xdebug
   version: "2.3.1"
-
 - src: mikegleasonjr.swap
   version: "0.0.3"
-
 - src: jdauphant.nginx
   version: "v2.7.4"
-
 - src: geerlingguy.git
   version: "1.4.0"
-
 - src: geerlingguy.nodejs
   version: "4.0.0"
-
 - src: geerlingguy.postgresql
   version: "1.0.2"
-
 - src: greendayonfire.mongodb
   version: "v2.0.3"

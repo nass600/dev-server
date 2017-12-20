@@ -5,6 +5,7 @@
     user: vagrant
     home: "/home/{{ user }}"
     become_user: "{{ user }}"
+
   pre_tasks:
     - name: Add known hosts
       known_hosts:
@@ -15,6 +16,7 @@
       with_items:
         - github.com
         - bitbucket.org
+
   roles:
     - Stouts.apt
     - geerlingguy.git
