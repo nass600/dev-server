@@ -1,21 +1,23 @@
-# Development Server
+# Vagrant Dev Server
 
-Ubuntu 14.04 LTS virtual environment for PHP apps via Vagrant and Ansible.
+Ubuntu 16.04.03 LTS virtual environment for PHP apps via Vagrant and Ansible.
 
 <br>
 
 ## Installed Software
 
-| ![](docs/img/ubuntu.png) | ![](docs/img/git.png) | ![](docs/img/nginx.png)  | ![](docs/img/postgresql.png) |
-|:------------------------:|:----------------------|:------------------------:|:----------------------------:|
-| Ubuntu                   | Git                   | Nginx                    | PostgreSQL                   |
-| 14.04 LTS                | 2.11.0                | 1.4.6                    | 9.3.15                       |
-
-| ![](docs/img/php.png) | ![](docs/img/composer.png) | ![](docs/img/robo.png) | ![](docs/img/nodejs.png) | ![](docs/img/grunt.png) | ![](docs/img/bower.png) |
-|:---------------------:|:--------------------------:|:----------------------:|:------------------------:|:-----------------------:|:-----------------------:|
-| PHP                   | Composer                   | Robo                   | NodeJS                   | Grunt                   | Bower                   |
-| 7.0.15                | 1.3.2                      | 1.0.5                  | 0.12.0                   | 1.2.0                   | 1.8.0                   |
-
+|                              | name       | version       |
+|:----------------------------:|:----------:|:-------------:|
+| ![](docs/img/ubuntu.png)     | Ubuntu     | `16.04.3 LTS` |
+| ![](docs/img/git.png)        | Git        | `2.11.0`      |
+| ![](docs/img/nginx.png)      | Nginx      | `1.4.6`       |
+| ![](docs/img/postgresql.png) | PostgreSQL | `9.3`         |
+| ![](docs/img/mongodb.png)    | MongoDB    | `3.2.19`      |
+| ![](docs/img/mysql.png)      | MySQL      | `5.7.22`      |
+| ![](docs/img/php.png)        | PHP        | `7.2`         |
+| ![](docs/img/composer.png)   | Composer   | `1.3.2`       |
+| ![](docs/img/robo.png)       | Robo       | `1.0.5`       |
+| ![](docs/img/nodejs.png)     | NodeJS     | `8.9.4`       |
 
 <br>
 

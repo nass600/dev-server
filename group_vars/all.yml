@@ -18,6 +18,9 @@ apt_repositories:
   - ppa:ondrej/php
 apt_default_packages:
   - unzip
+  - htop
+  - python-setuptools
+  - vim-nox-py2
 
 
 # Role: Git (geerlingguy.git)
@@ -48,24 +51,26 @@ dotfiles_files:
 
 php_enable_php_fpm: true
 php_webserver_daemon: "nginx"
+php_fpm_daemon: "php7.2-fpm"
 
 php_packages:
-  - php7.0-common
-  - php7.0-cli
-  - php7.0-dev
-  - php7.0-fpm
+  - php7.2-common
+  - php7.2-cli
+  - php7.2-dev
+  - php7.2-fpm
   - libpcre3-dev
-  - php7.0-gd
-  - php7.0-curl
-  - php7.0-imap
-  - php7.0-json
-  - php7.0-opcache
-  - php7.0-xml
-  - php7.0-mbstring
+  - php7.2-gd
+  - php7.2-curl
+  - php7.2-imap
+  - php7.2-json
+  - php7.2-opcache
+  - php7.2-xml
+  - php7.2-mbstring
   - php-sqlite3
   - php-apcu
-  - php7.0-pgsql
-  - php7.0-imagick
+  - php7.2-mysql
+  - php7.2-pgsql
+  - php7.2-imagick
 
 
 # Role: PHP Xdebug (geerlinguy.php-xdebug)
@@ -75,6 +80,7 @@ php_xdebug_remote_enable: 1
 php_xdebug_remote_connect_back: 1
 php_xdebug_idekey: 'phpstorm.xdebug'
 php_xdebug_module_path: '/usr/lib/php'
+php_xdebug_version: 2.6.0
 
 # Role: Composer (geerlinguy.composer)
 # ----------------------------------------------------
@@ -83,7 +89,7 @@ composer_home_path: "{{ home }}/.composer"
 composer_home_owner: "{{ user }}"
 composer_home_group: "{{ user }}"
 composer_global_packages:
-  - {name: consolidation/robo, release: "1.0.5"}
+  - {name: consolidation/robo, release: "1.2.1"}
 
 
 # Role: Nginx (jdauphant.nginx)
@@ -97,16 +103,20 @@ nginx_user: "{{ user }}"
 
 nodejs_version: "8.x"
 nodejs_install_npm_user: "{{ user }}"
-nodejs_npm_global_packages:
-  - name: grunt-cli
-    version: 1.2.0
 
 
 ## Role: PostgreSQL (geerlingguy.postgresql)
 ## ----------------------------------------------------
 
-postgresql_version: 9.3.5
+postgresql_version: 9.3
 postgresql_users:
   - name: root
     password: "root"
-    role_attr_flags: "CREATEDB"
+    role_attr_flags: "SUPERUSER"
+
+postgresql_hba_entries:
+  - { type: host, database: all, user: all, address: "0.0.0.0/0", auth_method: trust }
+
+postgresql_global_config_options:
+  - option: listen_addresses
+    value: "*"

@@ -9,7 +9,7 @@
 - src: geerlingguy.php
   version: "3.4.4"
 - src: geerlingguy.php-xdebug
-  version: "2.3.1"
+  version: "2.4.0"
 - src: mikegleasonjr.swap
   version: "0.0.3"
 - src: jdauphant.nginx
@@ -19,6 +19,8 @@
 - src: geerlingguy.nodejs
   version: "4.0.0"
 - src: geerlingguy.postgresql
-  version: "1.0.2"
+  version: "1.3.1"
+- src: geerlingguy.mysql
+  version: "2.8.1"
 - src: greendayonfire.mongodb
   version: "v2.0.3"

@@ -30,4 +30,5 @@
     - geerlingguy.composer
     - geerlingguy.nodejs
     - geerlingguy.postgresql
+    - geerlingguy.mysql
     - greendayonfire.mongodb
