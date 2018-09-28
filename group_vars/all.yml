@@ -21,6 +21,8 @@ apt_default_packages:
   - htop
   - python-setuptools
   - vim-nox-py2
+  - libpng16-dev # Needed for image-webpack-plugin
+  - fontconfig # install fonts with fc-caches
 
 
 # Role: Git (geerlingguy.git)
@@ -71,6 +73,7 @@ php_packages:
   - php7.2-mysql
   - php7.2-pgsql
   - php7.2-imagick
+  - php7.2-zip
 
 
 # Role: PHP Xdebug (geerlinguy.php-xdebug)
